@@ -28,11 +28,11 @@
 | --- | --- |
 
 ### 介绍
->**START 
+>START 
 
 ------------
 
-###[Ads](https://github.com/Ad-closeNN/Ad_Dev_Server/ "Ads")插件
+### [Ads](https://github.com/Ad-closeNN/Ad_Dev_Server/ "Ads")插件
 - 使用 ``?ads help`` 命令可以显示这条插件帮助信息
 - 使用 ``?ads`` 命令可以查看 Ad_Dev_Server 插件的信息
 - 使用 ``?ads line114`` 命令可以查看第114行代码的现状
@@ -45,7 +45,7 @@
 - 使用 ``!!s`` 命令可以切换成生存模式，作弊榜不会改变
 - 使用 ``!!reloadall`` 命令可以重新加载 MCDR 的全部插件
 
-####[GM](https://github.com/xksnetcbs/MCDR-gamemode_helper-1.16- "GM")插件（由 Ads 插件附加）
+#### [GM](https://github.com/xksnetcbs/MCDR-gamemode_helper-1.16- "GM")插件（由 Ads 插件附加）
 - 使用 ``!gm help`` 命令可以显示GM插件指令帮助信息
 - 使用 ``!Clear`` 命令可以使你注册 GM 插件
 - 使用 ``!c`` 命令可以使你进入旁观者模式
