@@ -32,7 +32,7 @@
 
 ------------
 
-### [Ads](https://github.com/Ad-closeNN/Ad_Dev_Server/ "Ads")插件
+#### [Ads](https://github.com/Ad-closeNN/Ad_Dev_Server/ "Ads")插件
 - 使用 ``?ads help`` 命令可以显示这条插件帮助信息
 - 使用 ``?ads`` 命令可以查看 Ad_Dev_Server 插件的信息
 - 使用 ``?ads line114`` 命令可以查看第114行代码的现状
@@ -57,7 +57,7 @@
 
 ------------
 
->END
+> ** END
 
 #### Tips
 - 使用``!!yb``命令记得要注意必须要有名字是``Supreme``的玩家，可以是假人也可以是真人，否则会出问题，导致这条命令用不了
