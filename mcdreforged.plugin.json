@@ -1,14 +1,10 @@
 {
   "id": "ads",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Ad_Dev_Server",
   "description": {
-    "zh_cn": "由Ad_closeNN编写，Ad Dev Server (ADS)服务器专用MCDR插件"
+    "zh_cn": "由Ad_closeNN编写，Ad Dev Server (ADS)服务器专用的 MCDR 插件"
   },
   "author": "Ad_closeNN",
-  "link": "https://www.bilibili.com/video/BV1GJ411x7h7",
-  "dependencies": {
-        "minecraft_sb": ">=11.4",
-        "ADDDDDDDDDDD": ">=0.0"
-      }
+  "link": "https://github.com/Ad-closeNN/Ad_Dev_Server"
 }
