@@ -91,7 +91,7 @@ def on_user_info(server, info):
         server.reply(info, '§6-------------Ad_Dev_Server 插件信息-------------')
         server.reply(info, '插件名称: §aAd_Dev_Server')
         server.reply(info, '插件ID: §aads')
-        server.reply(info, '插件版本: §aVer 1.0.0')
+        server.reply(info, '插件版本: §aVer 1.0.1')
         server.reply(info, '运行状态: §a运行中')
         server.reply(info, '§5——只是个 GM 插件的小附属和自己加来玩玩的插件罢了')
         server.reply(info, '    §aCopyright © 2023 Ad_closeNN, All rights reserved')
