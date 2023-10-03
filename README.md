@@ -6,9 +6,9 @@
 
 - 插件 ID: `ads`
 - 插件名: Ad_Dev_Server
-- 版本: 1.0.0
-  - 元数据版本: 1.0.0
-  - 发布版本: 1.0.0
+- 版本: 1.0.1
+  - 元数据版本: 1.0.1
+  - 发布版本: 1.0.1
 - 总下载量: 114514
 - 作者: [Ad_closeNN](https://github.com/Ad-closeNN)
 - 仓库: https://github.com/Ad-closeNN/Ad_Dev_Server/
