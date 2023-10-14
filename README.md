@@ -68,4 +68,5 @@
 #### Warning 注意
 本插件是为 Ad_Dev_Server 服务器开发的，所以有什么服务器适配不正常而 Ad_Dev_Server 服务器正常的自己去调，本人不负责任。如果 Ad_Dev_Server 服务器也不能用的就去提[Issues](https://github.com/Ad-closeNN/Ad_Dev_Server/issues "Issues")，本人看情况修改bug。别指望这个插件能为你的服务器带来什么好处，因为这插件真的没啥用，如果你是认真看完插件的代码的话，你就会发现这个插件的代码都是最基础的，所以写这插件就单纯拿来练练写代码能力和装B用的。
 
+Discord: https://discord.gg/MY5tPs6p5y
 
