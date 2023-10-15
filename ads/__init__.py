@@ -23,7 +23,9 @@ def on_load(server,parameter):
     server.register_help_message('?ads help', '查看 §aAd_Dev_Server §r插件的§6帮助§r信息')
     server.register_help_message('!!c', '切换成创造模式，且§c作弊榜§r会加 1')
     server.register_help_message('!!s', '切换成生存模式，§c作弊榜§a不会§r改变')
-    server.register_help_message( '!!reloadall', '重新加载 §aMCDR §r的全部插件')
+    server.register_help_message('?ads reloadall', '重新加载 §aMCDR §r的全部插件')
+    server.register_help_message('?ads reload', '重新加载 §aAd_Dev_Server §r插件')
+    server.register_help_message('!!pig', '永远都不会原谅你')
     server.logger.info('[§6ads§r]已重新加载插件')
 
 def on_user_info(server, info):
@@ -91,7 +93,7 @@ def on_user_info(server, info):
         server.reply(info, '§6-------------Ad_Dev_Server 插件信息-------------')
         server.reply(info, '插件名称: §aAd_Dev_Server')
         server.reply(info, '插件ID: §aads')
-        server.reply(info, '插件版本: §aVer 1.0.1')
+        server.reply(info, '插件版本: §aVer 1.0.1 Update')
         server.reply(info, '运行状态: §a运行中')
         server.reply(info, '§5——只是个 GM 插件的小附属和自己加来玩玩的插件罢了')
         server.reply(info, '    §aCopyright © 2023 Ad_closeNN, All rights reserved')
@@ -102,36 +104,33 @@ def on_user_info(server, info):
         server.reply(info, '§6使用 §a?ads §6命令可以查看 §aAd_Dev_Server §6插件的信息')
         server.reply(info, '§6使用 §a?ads line114 §6命令可以查看第114行代码的现状')
         server.reply(info, '§6使用 §a?ads reload§6命令可以重新加载 §aAd_Dev_Server §6插件')
+        server.reply(info, '§6使用 §a?ads reloadall §6命令可以重新加载 §aMCDR §6的全部插件')
         server.reply(info, '§6发送 §abyd §6可以生成一个标题')
         server.reply(info, '§6发送 §ays §6可以启动')
         server.reply(info, '§6使用 §a!gm help §6命令可以查看 §aGM §6插件的帮助信息')
         server.reply(info, '§6使用 §a!!yb §6命令可以让 §6Supreme 达成目标')
-        server.reply(info, '§6使用 §a!!c §6命令可以切换成创造模式，且§c作弊榜§6会加 1')
+        server.reply(info, '§6使用 §a!!c §6命令可以切换成创造模式，且§c作弊榜(zb)§6会加 1')
         server.reply(info, '§6使用 §a!!s §6命令可以切换成生存模式，§c作弊榜§a不会§6改变')
-        server.reply(info, '§6使用 §a!!reloadall §6命令可以重新加载 §aMCDR §6的全部插件')
+        server.reply(info, '§6使用 §a!!pig §6命令可以永远都不会原谅你')
         server.reply(info, '§6------------ Ad_Dev_Server 插件帮助信息 ------------')
     if info.content == '?ads line114':
         server.reply(info, '§a这里是插件代码中的第§6114§a行，好臭啊(恼)')
         server.reply(info, '§a你要是不信，就自己解包看看(恼)')
- #   if info.content == '?ads reload':
- #       server.say('§6插件重载已由' + (info.player) + '触发')
-   #     server.say('§5正在重载插件')
-   #     server.say('§aAd_Dev_Server §6插件已重新加载')
-
-from mcdreforged.api.command import *
-from mcdreforged.api.types import PluginServerInterface
-
-
-def on_load(server: PluginServerInterface, prev_module):
-    server.register_command(
-        Literal('!!reloadall')
-        .runs(handler)
-        .then(
-            GreedyText('content')
-            .runs(handler)
-        )
-    )
-    
-def handler(src, ctx):
-    src.get_server().execute_command(f'!!MCDR plugin reloadall {ctx.get("content", "")}', src)
+    if info.content == '?ads reload':
+        server.say('§6插件重载已由§5' + (info.player) + '§6触发')
+        server.say('§5正在重载插件')
+        server.say('§aAd_Dev_Server §6插件已重新加载')
+        server.execute_command(f'!!MCDR plugin reload ads')
+    if info.content == '?ads reloadall':
+        server.say('§c全部§6插件重载已由§5' + (info.player) + '§6触发')
+        server.say('§5正在重载§c全部§5插件')
+        server.say('§aMCDR §c全部§6插件已重新加载')
+        server.execute_command(f'!!MCDR plugin reloadall')
+    if info.content == '!c':
+        server.reply('§a你现在是§6旁观者§a模式！')
+    if info.content == '!s':
+        server.reply('§a你现在是§6生存§a模式！')
+    if info.content == '!!pig':
+        server.execute('execute at @a run playsound minecraft:entity.pig.death player @a')
+        server.say('§aPig §6死了，你现在开心了吧！你这个冷漠无情的人(' + (info.player) + ')，我永远都不会原谅你(' + (info.player) + ')，永远都不会——')
 
