@@ -1,6 +1,6 @@
 {
   "id": "ads",
-  "version": "1.0.1",
+  "version": "1.0.1 Update",
   "name": "Ad_Dev_Server",
   "description": {
     "zh_cn": "由Ad_closeNN编写，Ad Dev Server (ADS)服务器专用的 MCDR 插件"
