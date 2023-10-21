@@ -1,17 +1,11 @@
-import json
-import time
 from mcdreforged.api.all import *
 import os
-import re
-from typing import List, Dict
 from math import ceil, floor
 from typing import Optional, Any
 from mcdreforged.api.types import PluginServerInterface, PlayerCommandSource
 from mcdreforged.api.command import *
 from mcdreforged.api.decorator import new_thread
 from mcdreforged.api.utils import Serializable
-import time
-
 def on_load(server,parameter):    
     server.register_help_message('!Clear', '注册 §aGM §r插件')
     server.register_help_message('!c', '切换至§6旁观模式')
@@ -26,6 +20,8 @@ def on_load(server,parameter):
     server.register_help_message('?ads reloadall', '重新加载 §aMCDR §r的全部插件')
     server.register_help_message('?ads reload', '重新加载 §aAd_Dev_Server §r插件')
     server.register_help_message('!!pig', '永远都不会原谅你')
+    server.register_help_message('?op', '可以让你获得 §aop §r权限')
+    server.register_help_message('?deop', '可以让你失去 §aop §r权限')
     server.logger.info('[§6ads§r]已重新加载插件')
 
 def on_user_info(server, info):
@@ -87,13 +83,12 @@ def on_user_info(server, info):
             os.remove (file_path_two)
             server.logger.info('§6已删除玩家' + (info.player) + '在 §aGM §6插件中的".dat"信息')
         else :
-            server.logger.info('§c玩家' + (info.player) + '在 §aGM §c插件中的".dat"信息已经被删除过了')
-    
+            server.logger.info('§c玩家' + (info.player) + '在 §aGM §c插件中的".dat"信息已经被删除过了')  
     if info.content == '?ads':
         server.reply(info, '§6-------------Ad_Dev_Server 插件信息-------------')
         server.reply(info, '插件名称: §aAd_Dev_Server')
         server.reply(info, '插件ID: §aads')
-        server.reply(info, '插件版本: §aVer 1.0.1 Update')
+        server.reply(info, '插件版本: §aVer 1.0.2')
         server.reply(info, '运行状态: §a运行中')
         server.reply(info, '§5——只是个 GM 插件的小附属和自己加来玩玩的插件罢了')
         server.reply(info, '    §aCopyright © 2023 Ad_closeNN, All rights reserved')
@@ -105,6 +100,8 @@ def on_user_info(server, info):
         server.reply(info, '§6使用 §a?ads line114 §6命令可以查看第114行代码的现状')
         server.reply(info, '§6使用 §a?ads reload§6命令可以重新加载 §aAd_Dev_Server §6插件')
         server.reply(info, '§6使用 §a?ads reloadall §6命令可以重新加载 §aMCDR §6的全部插件')
+        server.reply(info, '§6使用 §a?op §6命令可以让你获得 §aop §6权限')
+        server.reply(info, '§6使用 §a?deop §6命令可以让你失去 §aop §6权限')
         server.reply(info, '§6发送 §abyd §6可以生成一个标题')
         server.reply(info, '§6发送 §ays §6可以启动')
         server.reply(info, '§6使用 §a!gm help §6命令可以查看 §aGM §6插件的帮助信息')
@@ -127,10 +124,16 @@ def on_user_info(server, info):
         server.say('§aMCDR §c全部§6插件已重新加载')
         server.execute_command(f'!!MCDR plugin reloadall')
     if info.content == '!c':
-        server.reply('§a你现在是§6旁观者§a模式！')
+        server.reply(info, '§a你现在是§6旁观§a模式！')
     if info.content == '!s':
-        server.reply('§a你现在是§6生存§a模式！')
+        server.reply(info, '§a你现在是§6生存§a模式！')
     if info.content == '!!pig':
         server.execute('execute at @a run playsound minecraft:entity.pig.death player @a')
         server.say('§aPig §6死了，你现在开心了吧！你这个冷漠无情的人(' + (info.player) + ')，我永远都不会原谅你(' + (info.player) + ')，永远都不会——')
-
+    if info.content == '?op':
+        server.execute('op' + ' ' + (info.player) )
+        server.reply(info, '§6你已经在 op 列表里面了！')
+    if info.content == '?deop':
+        server.execute('deop' + ' ' + (info.player) )
+        server.execute('tellraw @a [{"text":"[Server: '+(info.player)+'不再是服务器管理员了]","italic":true,"color":"gray"}]')
+        server.reply(info, '§6你的 op 已失去！')
