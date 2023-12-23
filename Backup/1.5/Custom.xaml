@@ -25,7 +25,7 @@
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
                     Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2023. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.5\nCopyright © Ad_closeNN 2023. All Rights Reserved." EventType="弹出窗口"/>
 		<local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="更新内容" EventData='V1.5 (2023/12/23) - 更新内容|1.增加"更新内容"，可直接查看版本更新说明\n2.将"版权信息"更新\n3.增加"主页源代码 (Website)，点击后直接进入主页的网页\n4.将"主页源代码"改为"主页源代码 (Github)"' EventType="弹出窗口"/>
+					Text="更新内容" EventData='V1.5 (2023/12/23) - 更新内容|1.增加"更新内容"，可直接查看版本更新说明\n2.将"版权信息"更新\n3.增加"主页源代码 (Website)"，点击后直接进入主页的网页\n4.将"主页源代码"改为"主页源代码 (Github)"' EventType="弹出窗口"/>
 	</StackPanel>
 </local:MyCard>
 
