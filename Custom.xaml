@@ -13,7 +13,7 @@
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
 					Text="打开 PCL 的目录" EventType="打开文件" EventData="{path}" ToolTip="你的 PCL 位于: {path}"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="下载本主页源文件" EventType="下载文件" EventData="https://githubfast.com/Ad-closeNN/PCL2-home-page/releases/download/1.4/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
+					Text="下载本主页源文件" EventType="下载文件" EventData="https://ad-closenn.github.io/aft/Backup/1.4.5/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
 </StackPanel>
 	<StackPanel Margin="0,0,0,15"/>
 <local:MyButton Padding="13,10,13,10" ColorType="Red"
@@ -23,7 +23,7 @@
 <local:MyCard Title="| 首页 |" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
 	<StackPanel Margin="25,40,23,15">
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
-                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2023. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.4\nCopyright © Ad_closeNN 2023. All Rights Reserved." EventType="弹出窗口"/>
+                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2023. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.4.5\nCopyright © Ad_closeNN 2023. All Rights Reserved." EventType="弹出窗口"/>
 	</StackPanel>
 </local:MyCard>
 
@@ -113,4 +113,4 @@
 		Logo="https://githubfast.com/favicon.ico" Title="主页源代码" Info="Ad-closeNN Github[fast]"
 		EventType="打开网页" EventData="https://githubfast.com/Ad-closeNN/PCL2-home-page" Type="Clickable" />
 <TextBlock HorizontalAlignment="right" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" 
-               Text="Ver 1.4 (2023/12/22)" />
+               Text="Ver 1.4.5 (2023/12/23)" />
