@@ -14,16 +14,20 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>  
 <body>
-    <div style="text-align:left;font-size:16px;"><a href="https://ad-closenn.github.io/aft/" style="text-decoration:none; display:inline-block;" target="_blank">[主页]</a><p style="display:inline-block;"> </p><p style="display:inline-block;">[帮助]</p></div> 
+    <div style="text-align:left;font-size:16px;"><a href="https://ad-closenn.github.io/aft/" style="text-decoration:none; display:inline-block;">[主页]</a><p style="display:inline-block;"> </p><p style="display:inline-block;">[帮助]</p></div> 
     <h1 style="font-size:50px;">如何使用？</h1> 
-    <h1 style="font-size:45px;text-align:center;">离线版</h1>
+    <h1 style="font-size:45px;text-align:center;">离线版（优先选择）</h1>
     <h1 style="font-size:40px;">下载</h1>
     <div style="font-size:20px;">你需要前往<a href="https://ad-closenn.github.io/aft/" target="_blank" style="text-decoration:none">https://ad-closenn.github.io/aft/</a>来选择你要下载的版本（比如V1.5）。点击“下载V1.5版本”,会下载到一个名为“Custom.xaml”的文件，把它放到你的PCL目录下的PCL文件夹即可。</div>
     <h1 style="font-size:40px;">使用</h1>
     <div style="font-size:20px;">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“读取本地文件”，再点击”刷新主页”即可。</div>
 
-    <h1 style="font-size:45px;text-align:center;">联网版</h1>
-    <div style="font-size:20px;">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“联网更新”，在“下载地址”内填写 https://ad-closenn.github.io/aft/ ，点击上方的“启动”，等待主页加载完毕即可。</div>
+    <h1 style="font-size:45px;text-align:center;">联网版（备用选择）</h1>
+    <div style="font-size:20px;">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“联网更新”，在“下载地址”内填写https://ad-closenn.github.io/aft/Custom.xaml，点击上方的“启动”，等待主页加载完毕即可。</div>
+
+    <h1 style="font-size:45px;text-align:center;">进 阶 玩 法</h1>
+    <div style="font-size:20px;">如果你想在你的主页文件内使用本主页文件，那么你可以写一个button样式。你需要使用到https://ad-closenn.github.io/aft/Custom.json/。例如：<strong>&lt;local:MyButton Padding="13,10,13,10" ColorType="Red"
+        Text="打开 PCL 2 主页" EventType="打开帮助" EventData="https://ad-closenn.github.io/aft/Custom.json"/&gt;</strong>，这样，点击“打开 PCL 2 主页”按钮后将会加载本主页。</div>
 
     <footer>  
     <div style="text-align:center;"> <p>Copyright © Ad_closeNN 2023. All Rights Reserved.</p></div>
