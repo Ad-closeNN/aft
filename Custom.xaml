@@ -1,5 +1,7 @@
 <TextBlock HorizontalAlignment="left" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" FontSize="30"
                Text="Welcome to Plain Craft Launcher 2 and this homepage!" />
+<TextBlock HorizontalAlignment="center" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" FontSize="25"
+               Text="2 0 2 4 ,  新 年 快 乐!" />
 <local:MyHint IsWarn="False"
 				Text="主页作者: Ad_closeNN"/>
 <local:MyHint Margin="0,8,0,2" IsWarn="True"
@@ -9,11 +11,11 @@
 <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
                     Text="刷新主页" EventType="刷新主页" ToolTip="就是一个刷新主页的按钮啦......"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="打开本主页的源代码" EventType="打开文件" EventData="{path}\PCL\Custom.xaml" ToolTip="将打开: {path}PCL\Custom.xaml"/>
+					Text="打开 PCL 文件夹下的主页源代码" EventType="打开文件" EventData="{path}\PCL\Custom.xaml" ToolTip="将打开: {path}PCL\Custom.xaml"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
 					Text="打开 PCL 的目录" EventType="打开文件" EventData="{path}" ToolTip="你的 PCL 位于: {path}"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="下载本主页源文件" EventType="下载文件" EventData="https://ad-closenn.github.io/aft/Backup/1.5/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
+					Text="下载本主页源文件" EventType="下载文件" EventData="https://ad-closenn.github.io/aft/Backup/1.6/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
 </StackPanel>
 	<StackPanel Margin="0,0,0,15"/>
 <local:MyButton Padding="13,10,13,10" ColorType="Red"
@@ -23,9 +25,9 @@
 <local:MyCard Title="| 首页 |" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="25,40,23,15">
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2023. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.5\nCopyright © Ad_closeNN 2023. All Rights Reserved." EventType="弹出窗口"/>
+                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2024. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.6\nCopyright © Ad_closeNN 2024. All Rights Reserved.\n祝各位新年快乐！" EventType="弹出窗口"/>
 		<local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="更新内容" EventData='V1.5 (2023/12/23) - 更新内容|1.增加"更新内容"，可直接查看版本更新说明\n2.将"版权信息"更新\n3.增加"主页源代码 (Website)"，点击后直接进入主页的网页\n4.将"主页源代码"改为"主页源代码 (Github)"' EventType="弹出窗口"/>
+					Text="更新内容" EventData='V1.6 (2024/1/1) - 更新内容|1.增加了"奇怪的东西"，展开卡片后可详细查看\n2.将"版权信息"更新，同时祝大家新年快乐！\n3.在最上方的标题处写上了字号为25的"2 0 2 4 ,  新 年 快 乐!"\n4.把"打开本主页的源代码"改为"打开 PCL 文件夹下的主页源代码，因为有人会使用联网更新' EventType="弹出窗口"/>
 	</StackPanel>
 </local:MyCard>
 
@@ -108,9 +110,34 @@
 						Title="启动 微信 (如果安装了的话)" Info="微信 - 是一种生活方式" EventType="打开网页" EventData="weixin://" Type="Clickable" />
 		<local:MyListItem Margin="-2,0,0,0" Logo="https://cstore-official.seewo.com/upload/images/221101/4f962ec5-c1b1-4a4f-afbc-d397fa8f88e7.png"						
 						Title="启动 希沃白板 5 (如果安装了的话)" Info="希沃白板，启动!" EventType="打开网页" EventData="easinote://" Type="Clickable" />
-
 </StackPanel>
 </local:MyCard>
+
+<local:MyCard Title="奇怪的东西" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="25,40,23,15">
+		<local:MyCard Title="国内网站" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="25,40,23,15">
+		<local:MyListItem Margin="-2,0,0,0" Logo="https://reservation.wanderearth.com.cn/icon.ico"
+						Title="瀚海星穹 - 《流浪地球》正版手游" Info="没错...是真的《流浪地球》手游..." EventType="打开网页" EventData="https://reservation.wanderearth.com.cn" Type="Clickable" />
+</StackPanel>
+</local:MyCard>
+		<local:MyCard Title="国外/境外网站" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="25,40,23,15">
+		<local:MyHint Margin="0,0,0,10" IsWarn="True" Text="如果打不开网站，请自行使用工具进行科学上网 (watt toolkit 等)"/>
+		<local:MyHint Margin="0,0,0,10" IsWarn="False" Text="使用的图床来自于 www.freeimg.cn 。感谢 freeimg 提供的免费图床"/>
+		<local:MyListItem Margin="-2,0,0,0" Logo="https://img2.freeimg.cn/2024/01/01/65925664a745a.ico" 
+						Title="甘城なつき - Twitch" Info="nacho_dayo" EventType="打开网页" EventData="https://www.twitch.tv/nacho_dayo" Type="Clickable" />
+		<local:MyListItem Margin="-2,0,0,0" Logo="https://www.freeimg.cn/i/2024/01/01/6592591b2eb03.ico" 
+						Title="Discord" Info="Discord - 想象这样一个场所……" EventType="打开网页" EventData="https://discord.com/" Type="Clickable" />
+		<local:MyListItem Margin="-2,0,0,0" Logo="https://www.freeimg.cn/i/2024/01/01/65925b9a98452.ico" 
+						Title="Twitter / X" Info="X。尽是新鲜事" EventType="打开网页" EventData="https://twitter.com" Type="Clickable" />
+		<local:MyListItem Margin="-2,0,0,0" Logo="https://www.freeimg.cn/i/2024/01/01/65925ce60d406.ico" 
+						Title="Youtube" Info="Youtube" EventType="打开网页" EventData="https://www.youtube.com" Type="Clickable" />
+</StackPanel>
+</local:MyCard>
+</StackPanel>
+</local:MyCard>
+
 	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="center" Width="200" Height="50"
 		Logo="https://githubfast.com/favicon.ico" Title="主页源代码 (Github)" Info="Ad-closeNN Github[fast]"
 		EventType="打开网页" EventData="https://githubfast.com/Ad-closeNN/PCL2-home-page" Type="Clickable" />
