@@ -1,10 +1,33 @@
 <TextBlock HorizontalAlignment="left" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" FontSize="30"
                Text="Welcome to Plain Craft Launcher 2 and this homepage!" />
 <TextBlock HorizontalAlignment="center" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" FontSize="25"
-               Text="2 0 2 4 ,  新 年 快 乐!" />
-<local:MyHint IsWarn="False"
-				Text="主页作者: Ad_closeNN"/>
-<local:MyHint Margin="0,8,0,2" IsWarn="True"
+               Text="2 0 2 4 ,  新 年 快 乐 !" />
+<!--从这里开始用了 Light Beacon 新闻主页的信息样式，十分感谢-->
+<StackPanel>
+  <StackPanel Margin="0,-10,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+        <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 主页由 Ad_closeNN 制作与维护。
+    </TextBlock>
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
+                📰 主页由 Ad_closeNN 制作与维护。
+    </TextBlock>
+      </Grid>
+    </Border>
+</StackPanel>
+</StackPanel>
+<!--从这里开始用了 Light Beacon 新闻主页的信息样式，十分感谢-->
+<local:MyHint Margin="0,0,0,0" IsWarn="True"
 				Text="未经允许，禁止二次发布"/>
 	<StackPanel Margin="0,0,0,15"/>
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
@@ -15,7 +38,7 @@
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
 					Text="打开 PCL 的目录" EventType="打开文件" EventData="{path}" ToolTip="你的 PCL 位于: {path}"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="下载本主页源文件" EventType="下载文件" EventData="https://ad-closenn.github.io/aft/Backup/1.6.5/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
+					Text="下载本主页源文件" EventType="下载文件" EventData="https://ad-closenn.github.io/aft/Backup/1.7/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
 </StackPanel>
 	<StackPanel Margin="0,0,0,15"/>
 <local:MyButton Padding="13,10,13,10" ColorType="Red"
@@ -25,9 +48,9 @@
 <local:MyCard Title="| 首页 |" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="25,40,23,15">
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2024. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.6.5\nCopyright © Ad_closeNN 2024. All Rights Reserved.\n祝各位新年快乐！" EventType="弹出窗口"/>
+                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2024. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.7\nCopyright © Ad_closeNN 2024. All Rights Reserved.\n祝各位新年快乐！" EventType="弹出窗口"/>
 		<local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="更新内容" EventData='V1.6.5 (2024/1/6) - 更新内容|1.修复了存在于V1.6版本的最后的"V1.6"未更正的问题\n2.将"版权信息"更新' EventType="弹出窗口"/>
+					Text="更新内容" EventData='V1.7 (2024/1/7) - 更新内容|1.修复了"新 年 快 乐!"字样的"!"没有空格的问题\n2.将"版权信息"更新\n3.更新了作者声明, 来源于 Light Beacon (最亮的信标) 的"PCL2 新闻主页"\n4.增加"版本切换", 可以快速查看历史主页版本, 来源于 Light Beacon (最亮的信标) 的"PCL2 新闻主页"\n5.增加结束段, 来源于 Light Beacon (最亮的信标) 的"PCL2 新闻主页"' EventType="弹出窗口"/>
 	</StackPanel>
 </local:MyCard>
 
@@ -138,6 +161,28 @@
 </StackPanel>
 </local:MyCard>
 
+    <local:MyCard Title="版本切换" Margin="0,0,0,20" IsSwaped="False" CanSwap="True">
+      <StackPanel Margin="25,40,23,15">
+	  <local:MyHint Margin="0,0,0,10" IsWarn="False" Text="这里是 PCL 2 主页的历史版本，你可以通过下面的选择框选择要切换并预览的版本"/>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="280" />
+          </Grid.ColumnDefinitions>
+          <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
+            <local:MyComboBoxItem Content="1.7"/>
+            <local:MyComboBoxItem Content="1.6.5" />
+			<local:MyComboBoxItem Content="1.6" />
+            <local:MyComboBoxItem Content="1.5" />
+            <local:MyComboBoxItem Content="1.4.5" />
+            <local:MyComboBoxItem Content="1.4" />
+          </local:MyComboBox>
+		    <local:MyButton Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Width="130" Text="打开 GitHub" EventType="打开网页" EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://githubfast.com/Ad-closeNN/pcl2-home-page/releases/tag/{0}}" />
+          <local:MyButton HorizontalAlignment="Right" Width="130" Grid.Column="1" Text="打开所选的版本" EventType="打开帮助" EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://ad-closenn.github.io/aft/Backup/{0}/Custom.json}" />
+        </Grid>
+      </StackPanel>
+    </local:MyCard>
+
 	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="center" Width="200" Height="50"
 		Logo="https://githubfast.com/favicon.ico" Title="主页源代码 (Github)" Info="Ad-closeNN Github[fast]"
 		EventType="打开网页" EventData="https://githubfast.com/Ad-closeNN/PCL2-home-page" Type="Clickable" />
@@ -145,4 +190,50 @@
 		Logo="https://ad-closenn.github.io/aft/favicon.ico" Title="主页源代码 (Website)" Info="Homepage Website"
 		EventType="打开网页" EventData="https://ad-closenn.github.io/aft" Type="Clickable" />
 <TextBlock HorizontalAlignment="right" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" 
-               Text="Ver 1.6.5 (2024/1/6)" />
+               Text="Ver 1.7 (2024/1/7)" />
+
+    <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
+      <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新主页" />
+      <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://githubfast.com/Ad-closeNN/PCL2-home-page/issues/new" ToolTip="点击前往 GitHub 提交反馈" />
+    </StackPanel>
+    <Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+      <StackPanel Margin="40,15,0,10">
+        <TextBlock Text="Plain Craft Launcher 2 主页" FontSize="22" Margin="0,5,5,5" />
+        <TextBlock Text="By：Ad_closeNN" />
+        <TextBlock Text="维护：Ad_closeNN" />
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+          <TextBlock Text="订阅地址: " />
+          <local:MyTextButton Margin="2" Text="https://ad-closenn.github.io/aft/Custom.xaml" EventType="复制文本" EventData="https://ad-closenn.github.io/aft/Custom.xaml" ToolTip="点击复制到剪贴板" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+          <TextBlock Text="官方网站: " />
+          <local:MyTextButton Margin="2" Text="https://ad-closenn.github.io/aft" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开主页官网" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+          <TextBlock Text="GitHub: " />
+          <local:MyTextButton Margin="2" Text="https://github.com/Ad-closeNN/PCL2-home-page" EventType="打开网页" EventData="https://github.com/Ad-closeNN/PCL2-home-page" ToolTip="点击打开 GitHub" />
+        </StackPanel>
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+          <TextBlock Text="无特殊声明本主页采用 " />
+          <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
+          <TextBlock Text=" 授权。" />
+        </StackPanel>
+        <Border Height="20500" Background="{DynamicResource ColorBrush7}" Opacity="0.3" Margin="-40,10,0,0">
+          <StackPanel>
+            <Grid Margin="0,7,0,15">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="100">
+                </ColumnDefinition>
+                <ColumnDefinition Width="1*">
+                </ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+              <TextBlock Text="到 底 啦" HorizontalAlignment="Center" FontSize="16" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+            </Grid>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </Border>
