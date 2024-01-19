@@ -214,6 +214,7 @@
             <ColumnDefinition Width="280" />
           </Grid.ColumnDefinitions>
           <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
+            <local:MyComboBoxItem Content="1.10"/>                       
             <local:MyComboBoxItem Content="1.9"/>                       
             <local:MyComboBoxItem Content="1.8"/>            
             <local:MyComboBoxItem Content="1.7"/>
