@@ -28,9 +28,9 @@
 </StackPanel>
 </StackPanel>
 <!--从这里开始用了 Light Beacon 新闻主页的信息样式，十分感谢-->
-<local:MyHint Margin="0,0,0,0" IsWarn="True"
-				Text="未经允许，禁止二次发布"/>
-	<StackPanel Margin="0,0,0,15"/>
+<local:MyHint Margin="0,0,0,0" IsWarn="False"
+				Text="感谢 Light Beacon, MFn233 贡献主页代码！"/>
+	<StackPanel Margin="0,0,0,10"/>
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
 <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
                     Text="刷新主页" EventType="刷新主页" ToolTip="就是一个刷新主页的按钮啦......"/>
@@ -39,7 +39,7 @@
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
 					Text="打开 PCL 的目录" EventType="打开文件" EventData="{path}" ToolTip="你的 PCL 位于: {path}"/>
 <local:MyButton HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					Text="下载本主页源文件" EventType="下载文件" EventData="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@latest/Backup/1.9/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
+					Text="下载本主页源文件" EventType="下载文件" EventData="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@main/Backup/1.11/Custom.xaml" ToolTip="直接把 Custom.xaml 放入 {path}PCL\ 文件夹即可"/>
 </StackPanel>
 	<StackPanel Margin="0,0,0,15"/>
 <local:MyButton Padding="13,10,13,10" ColorType="Red"
@@ -49,11 +49,11 @@
 <local:MyCard Title="| 首页 |" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="25,40,23,15">
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2024. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.10\nCopyright © Ad_closeNN 2024. All Rights Reserved.\n祝各位新年快乐！" EventType="弹出窗口"/>
+                    Text="版权信息" EventData="版权信息 - Copyright © Ad_closeNN 2024. All Rights Reserved.|本主页由 Ad_closeNN 制作\n当前版本为: Version 1.11\nCopyright © Ad_closeNN 2024. All Rights Reserved.\n祝各位新年快乐！" EventType="弹出窗口"/>
 		    <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					          Text="更新内容" EventData='V1.10 (2024/1/19) - 更新内容|1.把 GitHub 关于下载的链接换成更快的 CDN\n2.将"版权信息"更新' EventType="弹出窗口"/>
+					          Text="更新内容" EventData='V1.11 (2024/1/21) - 更新内容|1.把"小玩意"中的日历移除\n2.将"版权信息"更新\n3.忘记了项目是开源的了, 所以现在删除"未经允许, 禁止二次发布"的提示条, 改为贡献代码者名单\n4.将 CDN 的 @latest 改为 @main\n5.优化"小玩意"和"常用网址"\n6."更多"页更新\n7."常用网址"页更新' EventType="弹出窗口"/>
         <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Margin="0,0,10,0"
-					          Text="前往个性化" ToolTip="也可以快速切换主页" EventType="切换页面" EventData="3|1" />
+					          Text="前往个性化" ToolTip="可以快速切换主页" EventType="切换页面" EventData="3|1" />
 	</StackPanel>
 </local:MyCard>
 
@@ -67,7 +67,7 @@
                     Logo="https://zh.minecraft.wiki/favicon.ico" Title="Minecraft 中文 Wiki" Info="新的 Minecraft 中文 Wiki"
 		            EventType="打开网页" EventData="https://zh.minecraft.wiki/" Type="Clickable" />
 		<local:MyListItem Margin="-2,0,0,0"
-                    Logo="https://githubfast.com/favicon.ico" Title="Github" Info="Let's build from here"
+                    Logo="https://kkgithub.com/favicon.ico" Title="Github" Info="Let's build from here"
 		            EventType="打开网页" EventData="https://github.com/" Type="Clickable" />
 		<local:MyListItem Margin="-2,0,0,0" Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="MCBBS" Info="最大的我的世界《Minecraft》中文论坛" EventType="打开网页" EventData="https://www.mcbbs.net" Type="Clickable" />
                     <local:MyListItem Margin="-2,0,0,0" Logo="https://klpbbs.com/favicon.ico" Title="苦力怕BBS" Info="最大的我的世界《Minecraft》基岩版（BE）中文资源、交流论坛之一" EventType="打开网页" EventData="https://klpbbs.com/" Type="Clickable" />
@@ -76,7 +76,7 @@
                     <local:MyListItem Margin="-2,0,0,0" Logo="pack://application:,,,/images/Blocks/Anvil.png" Title="Curseforge" Info="The Home for the Best Minecraft Mods" EventType="打开网页" EventData="https://www.curseforge.com/minecraft" Type="Clickable" />
                     <local:MyListItem Margin="-2,0,0,0" Logo="https://modrinth.com/favicon.ico" Title="Modrinth" Info="Discover, play, and share Minecraft content through our open-source platform built for the community." EventType="打开网页" EventData="https://modrinth.com/" Type="Clickable" />
                     <local:MyListItem Margin="-2,0,0,0" Logo="https://mcpedl.com/favicon.ico" Title="MCPEDL" Info="Minecraft PE Mods, Maps, Skins, Seeds, Texture Packs" EventType="打开网页" EventData="https://mcpedl.com/" Type="Clickable" />
-		<local:MyButton Width="200" Height="35" HorizontalAlignment="center" Padding="13,0,23,0"
+		<local:MyButton Width="200" Height="35" HorizontalAlignment="center" Padding="13,0,23,0" Margin="10,0,0,0"
 		            Text="Minecraft News 新闻" EventType="打开帮助" EventData="https://news.bugjump.net/News.json" />
 		</StackPanel>
 		</local:MyCard>
@@ -88,13 +88,16 @@
 				<local:MyListItem  Margin="-2,0,0,0"
 		            		Logo="https://www.so.com/favicon.ico" Title="360" Info="360搜索，一个搜索引擎"
 		            		EventType="打开网页" EventData="https://www.so.com/" Type="Clickable" />
+				<local:MyListItem  Margin="-2,0,0,0"
+		            		Logo="https://www.baidu.com/favicon.ico" Title="百度" Info="百度一下，你就知道"
+		            		EventType="打开网页" EventData="https://www.baidu.com/" Type="Clickable" />        
 		</StackPanel>
 		</local:MyCard>
 </StackPanel>
 </local:MyCard>
 <local:MyCard Title="小玩意" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
 	<StackPanel Margin="25,40,23,15">
-	<TextBlock TextWrapping="Wrap" Margin="0,0,0,4" FontSize="21" Foreground="{DynamicResource ColorBrush2}"
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,10" FontSize="21" Foreground="{DynamicResource ColorBrush2}"
 				Text="PCL 2 内置下载器"/>
 	<local:MyHint Margin="0,0,0,10" IsWarn="False" Text="使用 PCL 的高速多线程下载引擎下载任意文件。请注意，部分网站（例如百度网盘）可能会报错(403)已禁止，无法正常下载。"/>
 	<local:MyHint Margin="0,0,0,10" IsWarn="True" Text="链接必须为以http://或https://开头的网址，部分网址可能无法下载" />
@@ -105,22 +108,38 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <TextBlock Margin="0,7,0,0" Text="下载链接：" Grid.Column="0" FontSize="13"/>
-            <local:MyTextBox Margin="-5,0,0,0" Name="web" Height="30" Grid.Column="1"/>
+            <local:MyTextBox Margin="-100,0,0,0" Name="web" Height="30" Grid.Column="1"/>
             <local:MyButton EventType="下载文件" EventData="{Binding ElementName=web,Path=Text}" Text="开始下载" Margin="5,0,0,0" Height="30" Grid.Column="2" Padding="2,0,2,0" ColorType="Highlight"/>
         </Grid>
 				<StackPanel Margin="0,0,0,15"/>
-			<local:MyButton Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0"
-					Text="进行内存优化" EventType="内存优化"/>
-						<StackPanel Margin="0,0,0,15"/>
-			<local:MyButton Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0"
-					Text="刷新 你知道吗 和 回声洞" EventType="刷新主页"/>
-						<StackPanel Margin="0,0,0,15"/>
-			<TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-					Text="你知道吗: {hint}"/>
-			<TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
-					Text="回声洞: {cave}"/>	
-			<Calendar HorizontalAlignment="Center" Margin="0,12,0,10" Grid.Column="0"/>
-	</StackPanel>
+                <Grid Margin="0,7,0,15">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="100">
+                </ColumnDefinition>
+                <ColumnDefinition Width="1*">
+                </ColumnDefinition>
+              </Grid.ColumnDefinitions>
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+              <TextBlock Text="百 宝 箱" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+      </Grid>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Margin="0,10,10,10">
+			<local:MyButton Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0" Margin="0,0,10,10" ColorType="Red"
+          Text="今日人品" EventType="今日人品"/>
+			<local:MyButton Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0" Margin="0,0,10,10" ColorType="Red"
+          Text="内存优化" EventType="内存优化"/>
+			<local:MyButton Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0" Margin="0,0,10,10" ColorType="Red"
+          Text="清理垃圾" EventType="清理垃圾"/>
+          </StackPanel>   
+            <StackPanel Margin="0,0,0,15"/>
+			<local:MyTextButton Margin="0,0,0,4"
+					Text="你知道吗: {hint}" EventType="刷新主页" ToolTip="点击刷新 你知道吗 和 回声洞"/>
+			<local:MyTextButton Margin="0,0,0,4"
+					Text="回声洞: {cave}" EventType="刷新主页" ToolTip="点击刷新 你知道吗 和 回声洞"/>	
+		
+  </StackPanel>
 </local:MyCard>
 <local:MyCard Title="快捷方式" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
               <StackPanel Margin="24,40,24,15">	
@@ -153,10 +172,23 @@
           <TextBlock TextWrapping="Wrap" Text="最后面的结束语和切换版本确实是基于 Light Beacon (最亮的信标) 的源代码写的。在本主页的源代码和主页里面都有感谢他的话。非常感谢 Light Beacon！"/>
         </StackPanel>
         </local:MyCard>
+    <local:MyCard Title='Q3: "其他主页"中为什么没有 MFn233 / Wemsur 的 简单主页 / pcl_homepage 的预览？' Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+          		<StackPanel Margin="25,40,23,15">
+          <TextBlock TextWrapping="Wrap" Text="在 MFn233/Wemsur 的主页的存储库上，没有放置 Custom.json，导致只能使用联网更新/预设或离线主页。预览主页已经写好他的了(源代码里)，如果他(们)以后把 Custom.json 放进存储库的话，那就可以直接预览了。"/>
+          <TextBlock TextWrapping="Wrap" Margin="0,10,0,10" Text="下面是主页的直链，点击即可自动复制到剪切板。然后点击按钮，切换到 PCL 2 的个性化，选择联网更新(虽然我知道可以直接点击预设)，然后粘贴即可"/>
+          <local:MyTextButton
+            Text="https://cdn.jsdelivr.net/gh/MFn233/PCL-Mainpage@latest/Custom.xaml" EventType="复制文本" EventData="https://cdn.jsdelivr.net/gh/MFn233/PCL-Mainpage@latest/Custom.xaml"/>
+          <local:MyTextButton
+            Text="https://gitee.com/my_com_cn/pcl_homepage/raw/master/Custom.xaml" EventType="复制文本" EventData="https://gitee.com/my_com_cn/pcl_homepage/raw/master/Custom.xaml"/>
+          <local:MyButton  Width="200" Height="35" HorizontalAlignment="left" Padding="13,0,23,0" Margin="0,10,0,0"
+            Text="点击切换到 PCL 2 的个性化" EventData="3|1" EventType="切换页面"/>
+        </StackPanel>
+        </local:MyCard>
     </StackPanel>
     </local:MyCard>
     <local:MyCard Title="其他主页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
     		<StackPanel Margin="25,40,23,15">        
+        
         <local:MyCard Title="Light Beacon (最亮的信标): PCL 2 新闻主页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
               <StackPanel Margin="25,40,23,15">
           <StackPanel Orientation="Horizontal">
@@ -172,6 +204,8 @@
                   </StackPanel>
         </StackPanel>
         </local:MyCard>
+ 
+                
                 <local:MyCard Title="龙腾猫跃: PCL 2 自定义主页示例" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
               <StackPanel Margin="25,40,23,15">
           <StackPanel Orientation="Horizontal">
@@ -181,30 +215,49 @@
               Text="主页网站" EventType="打开网页" EventData="https://github.com/LTCatt/PCL2Help/"/>
           <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
               Text="GitHub 上的主页" EventType="打开网页" EventData="https://github.com/LTCatt/PCL2Help/blob/master/个性化/XAML%20格式.xaml"/>
-                  </StackPanel>
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="复制主页链接" EventData="https://cdn.jsdelivr.net/gh//LTCatt/PCL2Help@latest/个性化/XAML%20格式.xaml" EventType="复制文本"/>
+                  </StackPanel> 
         </StackPanel>
-<!--因为MFn233没有在repo中添加json，这部分代码废弃，等做好json后再重做
         </local:MyCard>
-                <local:MyCard Title="MFn233: PCL 2 简单主页 (PCL-Mianpage)" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+
+                <local:MyCard Title="MFn233: 简单主页 (PCL-Mianpage)" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
               <StackPanel Margin="25,40,23,15">
           <StackPanel Orientation="Horizontal">
+          <!--因为MFn233没有在repo中添加json，这部分代码被改为复制链接，等做好json后再重做
           <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
-              Text="预览主页" EventType="打开帮助" EventData="https://cdn.jsdelivr.net/gh/MFn233/PCL-Mainpage@latest/Custom.xaml"/>
+              Text="预览主页" EventType="打开帮助" EventData="https://cdn.jsdelivr.net/gh//MFn233/PCL-Mainpage@latest/Custom.json"/>
+          -->
           <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
               Text="主页网站" EventType="打开网页" EventData="https://github.com/LTCatt/PCL2Help/"/>
           <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
               Text="GitHub 上的主页" EventType="打开网页" EventData="https://github.com/LTCatt/PCL2Help/blob/master/个性化/XAML%20格式.xaml"/>
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="复制主页链接" EventData="https://cdn.jsdelivr.net/gh//MFn233/PCL-Mainpage@latest/Custom.xaml.xaml" EventType="复制文本"/>
+        </StackPanel>
+        </StackPanel>
+        </local:MyCard>
+                <local:MyCard Title="Wemsur: pcl_homepage" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+              <StackPanel Margin="25,40,23,15">
+          <StackPanel Orientation="Horizontal">
+          <!--因为Wemsur没有在repo中添加json，这部分代码被改为复制链接，等做好json后再重做
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="预览主页" EventType="打开帮助" EventData="https://gitee.com/my_com_cn/pcl_homepage/raw/master/Custom.json"/>
+          -->
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="主页网站" EventType="打开网页" EventData="https://gitee.com/my_com_cn/pcl_homepage"/>
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="Gitee 上的主页" EventType="打开网页" EventData="https://gitee.com/my_com_cn/pcl_homepage"/>
+          <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+              Text="复制主页链接" EventData="https://gitee.com/my_com_cn/pcl_homepage/raw/master/Custom.xaml" EventType="复制文本"/>
                   </StackPanel>
-        </StackPanel>
--->
+                  </StackPanel>
+                  </local:MyCard>
+
+       </StackPanel>
         </local:MyCard>
         </StackPanel>
         </local:MyCard>
-
-</StackPanel>
-</local:MyCard>
-
-
     <local:MyCard Title="版本切换" Margin="0,0,0,20" IsSwaped="False" CanSwap="True">
       <StackPanel Margin="25,40,23,15">
 	  <local:MyHint Margin="0,0,0,10" IsWarn="False" Text="这是 PCL 2 主页的历史版本，你可以通过下面的选择框选择要切换并预览的版本"/>
@@ -214,6 +267,7 @@
             <ColumnDefinition Width="280" />
           </Grid.ColumnDefinitions>
           <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
+            <local:MyComboBoxItem Content="1.11"/>                       
             <local:MyComboBoxItem Content="1.10"/>                       
             <local:MyComboBoxItem Content="1.9"/>                       
             <local:MyComboBoxItem Content="1.8"/>            
@@ -245,13 +299,13 @@
     </local:MyCard>
 
 	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="center" Width="200" Height="50"
-		Logo="https://githubfast.com/favicon.ico" Title="主页源代码 (Github)" Info="Ad-closeNN Gitub"
+		Logo="https://kkgithub.com/favicon.ico" Title="主页源代码 (Github)" Info="Ad-closeNN Gitub"
 		EventType="打开网页" EventData="https://github.com/Ad-closeNN/PCL2-home-page" Type="Clickable" />
 	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="center" Width="200" Height="50"
 		Logo="https://ad-closenn.github.io/aft/favicon.ico" Title="主页源代码 (Website)" Info="Homepage Website"
 		EventType="打开网页" EventData="https://ad-closenn.github.io/aft" Type="Clickable" />
 <TextBlock HorizontalAlignment="right" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" 
-               Text="Ver 1.10 (2024/1/19)" />
+               Text="Ver 1.11 (2024/1/21)" />
 
     <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
       <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新主页" />
@@ -264,7 +318,7 @@
         <TextBlock Text="维护：Ad_closeNN" />
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
           <TextBlock Text="订阅地址 (推荐, 使用 CDN 加速): " />
-          <local:MyTextButton Margin="2" Text="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@latest/Custom.xaml" EventType="复制文本" EventData="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@latest/Custom.xaml" ToolTip="点击复制到剪贴板" />
+          <local:MyTextButton Margin="2" Text="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@main/Custom.xaml" EventType="复制文本" EventData="https://cdn.jsdelivr.net/gh/Ad-closeNN/aft@latest/Custom.xaml" ToolTip="点击复制到剪贴板" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
           <TextBlock Text="订阅地址: " />
