@@ -9,31 +9,142 @@
         body {  
             font-family: 'JetBrains Mono', sans-serif;  
         }  
+        button {
+            margin-right: 15px;
+            /* 添加右边距 */
+            font-family: 'JetBrains Mono', 'HarmonyOS Sans SC', 'Microsoft YaHei UI'
+        }
+        
+        .header {
+      position: fixed;
+      top: 10;
+      left: 10;
+      background-color: #3498db;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      display: flex;
+      align-items: center; /* 垂直居中 */
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center; /* 垂直居中 */
+    }
+
+    .button {
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .separator {
+      height: 20px; /* 设置竖线高度 */
+      width: 1px; /* 设置竖线宽度 */
+      background-color: white; /* 设置竖线颜色 */
+      margin: 0 10px; /* 设置竖线两侧的间距，可根据需要调整 */
+    }
+    .powered-by {
+            position: absolute;
+            top: 10px;
+            /* 距离顶部的距离 */
+            right: 10px;
+            /* 距离右侧的距离 */
+            color: gray;
+            /* 文字颜色 */
+            font-size: 12px;
+            /* 文字大小 */
+        }
+
+        .made-by {
+            position: absolute;
+            top: 30px;
+            /* 距离顶部的距离 */
+            right: 10px;
+            /* 距离右侧的距离 */
+            color: gray;
+            /* 文字颜色 */
+            font-size: 12px;
+            /* 文字大小 */
+        }
+        #myButton {
+      display: inline;
+      animation: colorChange 10s infinite; /* 调整动画时长 */
+    }
+    @keyframes colorChange {
+      0% {
+        color: red; /* 开始颜色 */
+      }
+      10% {
+        color: orange; /* 中间颜色1 */
+      }
+      20% {
+        color: yellow; /* 中间颜色2 */
+      }
+      30% {
+        color: green; /* 中间颜色3 */
+      }
+      40% {
+        color: cyan; /* 中间颜色4 */
+      }
+      50% {
+        color: blue; /* 中间颜色5 */
+      }
+      60% {
+        color: purple; /* 中间颜色6 */
+      }
+      70% {
+        color: pink; /* 中间颜色7 */
+      }
+      80% {
+        color: brown; /* 中间颜色8 */
+      }
+      90% {
+        color: gray; /* 中间颜色9 */
+      }
+      100% {
+        color: red; /* 结束颜色，与开始颜色相同，形成循环 */
+      }
+    }
     </style>      
     <title>[帮助] PCL 2 主页文件</title>  
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>  
 <body>
-    <div style="text-align:left;font-size:16px;"><a href="https://ad-closenn.github.io/aft/" style="text-decoration:none; display:inline-block;">[主页]</a><p style="display:inline-block;"> </p><p style="display:inline-block;">[帮助]</p></div> 
-    <h1 style="font-size:50px;">如何使用？</h1> 
+    <div class="powered-by">Powered by GitHub Pages</div>
+    <div class="made-by">Made by Ad_closeNN</div>
+    
+    <div class="header">
+        <div class="button-container">
+          <button class="button" onclick="window.open('https://ad-closenn.github.io')">仪表盘</button>
+          <div class="separator"></div>
+          <button class="button" onclick="window.open('https://ad-closenn.github.io/project')">项目列表</button>
+          <div class="separator"></div>
+          <button class="button" onclick="window.open('https://ad-closenn.github.io/aft')">下载主页</button>
+        </div>
+      </div>    
+      <br><br><br>
+      <h1 style="font-size:50px;" id="myButton">如何使用？</h1> 
     <h1 style="font-size:45px;text-align:center;">离线版（优先选择）</h1>
-    <h1 style="font-size:40px;">下载</h1>
-    <div style="font-size:20px;">你需要前往<a href="https://ad-closenn.github.io/aft/" target="_blank" style="text-decoration:none">https://ad-closenn.github.io/aft/</a>来选择你要下载的版本（比如V1.11）。点击“下载V1.11版本”,会下载到一个名为“Custom.xaml”的文件，把它放到你的PCL目录下的PCL文件夹即可。</div>
-    <h1 style="font-size:40px;">使用</h1>
+    <h1 style="font-size:40px;color:red">下载</h1>
+    <div style="font-size:20px;">你需要前往<a href="https://ad-closenn.github.io/aft/" target="_blank" style="text-decoration:none">https://ad-closenn.github.io/aft/</a>来选择你要下载的版本（比如V1.11）。点击“下载V1.11版本”,会下载到一个名为“Custom.xaml”的文件，把它放到你的PCL目录下的PCL文件夹即可。<div style="display:inline;color:red">请记住，必须覆盖原有的 Custom.xaml 文件才能被 PCL 2 读取到。使用之前请备份好原有的 Custom.xaml 。</div></div>
+    <h1 style="font-size:40px;color:green">使用</h1>
     <div style="font-size:20px;">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“读取本地文件”，再点击”刷新主页”即可。</div>
 
     <h1 style="font-size:45px;text-align:center;">联网版（备用选择）</h1>
-    <div style="font-size:20px;">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“联网更新”，在“下载地址”内填写https://ad-closenn.github.io/aft/Custom.xaml，点击上方的“启动”，等待主页加载完毕即可。</div>
-
-    <h1 style="font-size:45px;text-align:center;">进 阶 玩 法</h1>
-    <div style="font-size:20px;">如果你想在你的主页文件内使用本主页文件，那么你可以写一个button样式。你需要使用到https://ad-closenn.github.io/aft/Custom.json/。例如：<strong>&lt;local:MyButton Padding="13,10,13,10" ColorType="Red"
+    <div style="font-size:20px;display:inline">打开你的PCL，点击上方的“设置”，点击侧边栏的“个性化”，往下滑找到“主页”，选择“联网更新”，在“下载地址”内填写<div style="display:inline">https://ad-closenn.github.io/aft/Custom.xaml，点击上方的“启动”，等待主页加载完毕即可。</div></div>
+    <br>
+    <h1 style="font-size:45px;text-align:center;" id="myButton">进 阶 玩 法</h1>
+    <br>
+    <div style="font-size:20px;display:inline">如果你想在你的主页文件内使用本主页文件，那么你可以写一个button样式。你需要使用到https://ad-closenn.github.io/aft/Custom.json/。例如：<strong style="display:inline">&lt;local:MyButton Padding="13,10,13,10" ColorType="Red"
         Text="打开 PCL 2 主页" EventType="打开帮助" EventData="https://ad-closenn.github.io/aft/Custom.json"/&gt;</strong>，这样，点击“打开 PCL 2 主页”按钮后将会加载本主页。</div>
 
     <footer>  
     <div style="text-align:center;"> <p>Copyright © Ad_closeNN 2024. All Rights Reserved.</p></div>
-    <div style="text-align:center;"><p style="display:inline-block;">字体鸣谢: </p><a href="https://www.jetbrains.com/lp/mono/" style="text-decoration:none; display:inline-block;" target="_blank"> JetBrains Mono</a></div>  
-    <div style="text-align:center;"><p style="display:inline-block;">程序鸣谢: </p><a href="https://afdian.net/a/LTCat" style="text-decoration:none; display:inline-block;" target="_blank">龙腾猫跃</a>  </div>
-    <div style="text-align:center;"><p style="display:inline-block;">网站鸣谢: &nbsp</p><a href="https://pages.github.com/" style="text-decoration:none; display:inline-block;" target="_blank">GitHub Pages</a>  </div>
     </footer>  
 </body>  
 </html>

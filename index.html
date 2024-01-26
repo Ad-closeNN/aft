@@ -9,29 +9,149 @@
         body {  
             font-family: 'JetBrains Mono', sans-serif;  
         }  
+                button {
+            margin-right: 15px;
+            /* 添加右边距 */
+            font-family: 'JetBrains Mono', 'HarmonyOS Sans SC', 'Microsoft YaHei UI'
+        }
+        
+        .header {
+      position: fixed;
+      top: 10;
+      left: 10;
+      background-color: #3498db;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      display: flex;
+      align-items: center; /* 垂直居中 */
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center; /* 垂直居中 */
+    }
+
+    .button {
+      background-color: #3498db;
+      color: white;
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .separator {
+      height: 20px; /* 设置竖线高度 */
+      width: 1px; /* 设置竖线宽度 */
+      background-color: white; /* 设置竖线颜色 */
+      margin: 0 10px; /* 设置竖线两侧的间距，可根据需要调整 */
+    }
+    .powered-by {
+            position: absolute;
+            top: 10px;
+            /* 距离顶部的距离 */
+            right: 10px;
+            /* 距离右侧的距离 */
+            color: gray;
+            /* 文字颜色 */
+            font-size: 12px;
+            /* 文字大小 */
+        }
+
+        .made-by {
+            position: absolute;
+            top: 30px;
+            /* 距离顶部的距离 */
+            right: 10px;
+            /* 距离右侧的距离 */
+            color: gray;
+            /* 文字颜色 */
+            font-size: 12px;
+            /* 文字大小 */
+        }
+
+    #myButton {
+      display: inline;
+      animation: colorChange 10s infinite; /* 调整动画时长 */
+    }
+    @keyframes colorChange {
+      0% {
+        color: red; /* 开始颜色 */
+      }
+      10% {
+        color: orange; /* 中间颜色1 */
+      }
+      20% {
+        color: yellow; /* 中间颜色2 */
+      }
+      30% {
+        color: green; /* 中间颜色3 */
+      }
+      40% {
+        color: cyan; /* 中间颜色4 */
+      }
+      50% {
+        color: blue; /* 中间颜色5 */
+      }
+      60% {
+        color: purple; /* 中间颜色6 */
+      }
+      70% {
+        color: pink; /* 中间颜色7 */
+      }
+      80% {
+        color: brown; /* 中间颜色8 */
+      }
+      90% {
+        color: gray; /* 中间颜色9 */
+      }
+      100% {
+        color: red; /* 结束颜色，与开始颜色相同，形成循环 */
+      }
+    }
     </style>      
     <title>PCL 2 主页文件</title>  
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>  
 <body>
-    <div style="text-align:left;font-size:16px;"><p style="text-decoration:none; display:inline-block;">[主页]</p><a href="https://ad-closenn.github.io/aft/help/" style="display:inline-block; text-decoration:none;">[帮助]</a></div> 
-    <h1 style="font-size:50px;">欢迎使用由 Ad_closeNN 制作的 PCL 2 主页文件！</h1>  
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Custom.xaml" style="text-decoration:none;">下载最新版本 (V1.11)</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/latest" target="_blank" style="text-decoration:none;"> Github</a>  </p>  
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.11/Custom.xaml" style="text-decoration:none;">下载V1.11版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.11" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.10/Custom.xaml" style="text-decoration:none;">下载V1.10版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.10" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.9/Custom.xaml" style="text-decoration:none;">下载V1.9版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.9" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.8/Custom.xaml" style="text-decoration:none;">下载V1.8版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.8" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.7/Custom.xaml" style="text-decoration:none;">下载V1.7版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.7" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.6.5/Custom.xaml" style="text-decoration:none;">下载V1.6.5版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.6.5" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.6/Custom.xaml" style="text-decoration:none;">下载V1.6版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.6" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.5/Custom.xaml" style="text-decoration:none;">下载V1.5版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.5" target="_blank" style="text-decoration:none;"> Github</a>  </p>      
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.4.5/Custom.xaml" style="text-decoration:none;">下载V1.4.5版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.4.5" target="_blank" style="text-decoration:none;"> Github</a>  </p>  
-    <p style="font-size:20px;"><a href="https://ad-closenn.github.io/aft/Backup/1.4/Custom.xaml" style="text-decoration:none;">下载V1.4版本</a><a href="https://www.github.com/ad-closenn/pcl2-home-page/releases/tag/1.4" target="_blank" style="text-decoration:none;"> Github</a>  </p>  
+    <div class="powered-by">Powered by GitHub Pages</div>
+    <div class="made-by">Made by Ad_closeNN</div>
+
+    <div class="header">
+        <div class="button-container">
+          <button class="button" onclick="window.open('https://ad-closenn.github.io')">仪表盘</button>
+          <div class="separator"></div>
+          <button class="button" onclick="window.open('https://ad-closenn.github.io/project')">项目列表</button>
+          <div class="separator"></div>
+          <button class="button" onclick="window.open('https://ad-closenn.github.io/aft/help')">主页帮助</button>
+        </div>
+      </div>
+    <br><br><br>
+    <h1 style="font-size:50px;" id="myButton">欢迎使用由 Ad_closeNN 制作的 PCL 2 主页文件！</h1>
+    <br><br>
+    <button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Custom.xaml')">下载最新的版本 (V1.11)</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/latest')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.10/Custom.xaml')">下载V1.10版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.10/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.9/Custom.xaml')">下载V1.9版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.9/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.8/Custom.xaml')">下载V1.8版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.8/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.7/Custom.xaml')">下载V1.7版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.7/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.6.5/Custom.xaml')">下载V1.6.5版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.6.5/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.6/Custom.xaml')">下载V1.6版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.6/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.5/Custom.xaml')">下载V1.5版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.5/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.4.5/Custom.xaml')">下载V1.4.5版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.4.5/')">GitHub 更新说明</button>
+    <br>
+    <button style="font-size:25px;display:inline-block;margin-top: 10px;" type="button" onclick="window.open('https://ad-closenn.github.io/aft/Backup/1.4/Custom.xaml')">下载V1.4版本</button><button style="font-size:25px;display:inline-block" type="button" onclick="window.open('https://github.com/ad-closenn/pcl2-home-page/releases/tag/1.4/')">GitHub 更新说明</button>
  <footer>  
     <div style="text-align:center;"> <p>Copyright © Ad_closeNN 2024. All Rights Reserved.</p></div>
-    <div style="text-align:center;"><p style="display:inline-block;">字体鸣谢: &nbsp</p><a href="https://www.jetbrains.com/lp/mono/" style="text-decoration:none; display:inline-block;" target="_blank"> JetBrains Mono</a></div>  
-    <div style="text-align:center;"><p style="display:inline-block;">程序鸣谢: &nbsp</p><a href="https://afdian.net/a/LTCat" style="text-decoration:none; display:inline-block;" target="_blank">龙腾猫跃</a>  </div>
-    <div style="text-align:center;"><p style="display:inline-block;">网站鸣谢: &nbsp</p><a href="https://pages.github.com/" style="text-decoration:none; display:inline-block;" target="_blank">GitHub Pages</a>  </div>
  </footer>  
 </body>  
 </html>
